@@ -2,9 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ControlAnimationArm : MonoBehaviour
+public class ControlAnimation : MonoBehaviour
 {
-    public GameObject Arm;
+    public GameObject Obj;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,8 +14,8 @@ public class ControlAnimationArm : MonoBehaviour
     public void ToggleArmAnimation()
     {
 
-        Animator animator = Arm.GetComponent<Animator>();
-        if (animator.enabled == false)
+        Animator animator = Obj.GetComponent<Animator>();
+        if (!animator.enabled)
         {
             animator.enabled = true;
         }

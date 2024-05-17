@@ -6,6 +6,7 @@ using UnityEngine;
 public class HandTriggers : MonoBehaviour
 {
     private bool TableIsEmpty = true;
+    public GameObject HandIngot;
     public List<GameObject> TableIngots = new List<GameObject>();
     public List<GameObject> TrolleyIngots = new List<GameObject>();
 
@@ -19,13 +20,22 @@ public class HandTriggers : MonoBehaviour
 
     private void OnTriggerEnter(Collider trigger)
     {
+        if (HandIngot.activeSelf)
+        {
+            HandIngot.SetActive(false);
+        }
+        else 
+        {
+            HandIngot.SetActive(true);
+        }
+        
         if (trigger.gameObject.name == "TableTriggerGrab")
         {
             if (TableIsEmpty)
             {
                 foreach (GameObject Ingot in TableIngots)
                 {
-                    if (Ingot.activeSelf == false)
+                    if (!Ingot.activeSelf)
                     {
                         Ingot.SetActive(true);
                         if (TableIngots[TableIngots.Count - 1].activeSelf == true)
@@ -40,7 +50,7 @@ public class HandTriggers : MonoBehaviour
             {
                 foreach (GameObject Ingot in TableIngots)
                 {
-                    if (Ingot.activeSelf == true)
+                    if (Ingot.activeSelf)
                     {
                         Ingot.SetActive(false);
                         break;
@@ -54,7 +64,7 @@ public class HandTriggers : MonoBehaviour
         {
             foreach (GameObject Ingot in TrolleyIngots)
             {
-                if (Ingot.activeSelf == true)
+                if (Ingot.activeSelf)
                 {
                     Ingot.SetActive(false);
                     break;
