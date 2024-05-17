@@ -9,7 +9,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3619836102807212163}
-  - component: {fileID: 568069253487098743}
   - component: {fileID: 5255979856906526796}
   m_Layer: 0
   m_Name: roboterarm
@@ -34,27 +33,6 @@ Transform:
   - {fileID: 5269158391345098888}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &568069253487098743
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 18904991459347306}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 0, y: 0, z: 0.9130629}
-  m_Center: {x: -186.88654, y: -245.6417, z: 0.04345081}
 --- !u!54 &5255979856906526796
 Rigidbody:
   m_ObjectHideFlags: 0
